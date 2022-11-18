@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 24px;
+  background: #404040;
+  margin: 14px 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.nav-link:hover {
+  background-color: #facc15;
+  color: white;
+}
+
+.nav-link::after {
+  content: attr(data-text);
+  position: absolute;
+  left: -20px;
+  background: #facc15;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  width: 0rem;
+  height: 100%;
+  border-radius: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 6rem;
+  left: -105px;
+  opacity: 1;
+}
+
+.react-tabs__tab--selected {
+  background-color: #facc15;
+  color: white;
+}
+
+@media screen and (max-width: 765px) {
+  .nav-link::after {
+    display: none;
+  }
+}
+
+/* Portfolio CSS */
+.portfolio_image {
+  position: relative;
+}
+
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #facc15;
+  font-size: 25px;
+  font-weight: bold;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.image_overlay:hover {
+  opacity: 1;
+}
+
+.image_overlay h1 {
+  transform: translateY(25px);
+  transition: 0.5s ease;
+}
+
+.image_overlay:hover > h1 {
+  transform: translateY(0px);
+}
+
+/* CUSTOM SCROLLBAR  */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Roadmap for blockchain
+
+Basic of CS
+Basic of blockchain
+Front End Development -- React
+Interaction with blockchain -- Ethers.js
+Blockchain language --- Solidity
+Build Project
+
+*/
